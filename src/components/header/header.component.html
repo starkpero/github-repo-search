@@ -1,0 +1,22 @@
+<div class="container mt-3">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header bg-secondary text-white">
+            <h3>Github user search</h3>
+          </div>
+          <div class="card-body">
+            <form class="form-inline" (submit)="searchUser()">
+              <div class="form-group">
+                <input [(ngModel)]="query" name="user" size="140" type="search" class="form-control" placeholder="search user...">
+              </div>
+              <div>
+                <input type="submit" value="Search" class="btn btn-secondary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
