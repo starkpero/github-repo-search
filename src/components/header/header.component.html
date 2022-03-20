@@ -10,7 +10,7 @@
               <div class="form-group">
                 <input [(ngModel)]="query" name="user" size="140" type="search" class="form-control" placeholder="search user...">
               </div>
-              <div>
+              <div m-1 mt-2>
                 <input type="submit" value="Search" class="btn btn-secondary">
               </div>
             </form>
@@ -18,5 +18,14 @@
         </div>
       </div>
     </div>
-  
+  <div class="row">
+      <div class="col">
+          <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col">
+        <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+    </div>
+</div>
   </div>
