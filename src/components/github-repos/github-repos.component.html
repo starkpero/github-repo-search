@@ -1,5 +1,31 @@
-<div class="row d-flex justify-content-between">
+<!-- <div class="row d-flex justify-content-between">
     <div class="col-md-4">.col-md-4</div>
     <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
   </div>
-  
+   -->
+<!-- <div class="card-body">
+    <ul class="list-group"></ul>
+</div> -->
+<!-- <div>
+    <div class="ui card container link">
+        <h2 class="ui blue header name" *ngFor=let repo of githubRepos>{{repo.name}}</h2>
+        <div  class="description" *ngFor=let repo of githubRepos>{{repo.description}}</div>
+        <!-- <div *ngIf="!githubRepos.description" class="ui description grey"><i>No description found</i></div> -->
+        <!-- <div class="ui label-container extra content">
+            <language-label *ngFor="let e of languageList | slice:0:5; let i=index" [language]="e"></language-label>
+            <div class="ui content description italic grey" *ngIf="languageList.length === 0 && languageListInit"><i>No languages found</i></div>
+        </div> -->
+    <!-- </div>
+</div> --> -->
+
+<div class="card-body">
+    <ul class="list-group">
+        <li *ngFor="let repo of githubRepos | paginate: {
+            itemsPerPage: 10,
+            currentPage: page,
+            totalItems: totalRepos}" class="list group item d-flex justify-content-between">
+            <a href="{{repo.html_url}}" class="text-primary font-weight-bold">{{repo.name}}</a>
+
+        </li>
+    </ul>
+</div>

@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GithubReposComponent implements OnInit {
 
   @Input() githubRepos:any;
+  @Input() totalRepos:number;
+  @Input() page:number;
   constructor() { }
 
   ngOnInit(): void {

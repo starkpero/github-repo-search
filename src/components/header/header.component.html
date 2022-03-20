@@ -1,17 +1,18 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
 <div class="container mt-3">
     <div class="row">
       <div class="col">
         <div class="card">
           <div class="card-header bg-secondary text-white">
-            <h3>Github user search</h3>
+            <h3 class="text-center">Github user search</h3>
           </div>
           <div class="card-body">
             <form class="form-inline" (submit)="searchUser()">
               <div class="form-group">
-                <input [(ngModel)]="query" name="user" size="140" type="search" class="form-control" placeholder="search user...">
+                <input [(ngModel)]="query" name="user" size="120" type="search" class="form-control" placeholder="search user...">
               </div>
               <div m-1 mt-2>
-                <input type="submit" value="Search" class="btn btn-secondary">
+                <input type="submit" value="Search" class="btn btn-secondary btn-lg float-right">
               </div>
             </form>
           </div>
@@ -28,4 +29,13 @@
         <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
     </div>
 </div>
+<div class="pagination-div">
+  <pagination-controls class="ui pagination"(pageChange)="pageChanged($event)"></pagination-controls>
+  <div class="skip-buttons">
+  <button [disabled]="page == 1" class="ui basic button blue small older" (click)="decrement(10)"><i class="angle double left icon"></i>Older
+  </button>
+  <button [disabled]="totalRepos == page"class="ui basic button blue small newer" (click)="increment(10)">Newer<i class="angle double right icon"></i>
+  </button>
+</div>
   </div>
+  

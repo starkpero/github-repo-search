@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import {NgxPaginationModule} from 'ngx-pagination'
+import {NgxSpinnerModule} from 'ngx-spinner'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from '../components/header/header.component';
@@ -20,8 +22,11 @@ import { GithubProfileCardComponent } from '../components/github-profile-card/gi
   imports: [
     FormsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    NgxSpinnerModule
   ],
+  exports: [NgxSpinnerModule],
   providers: [],
   bootstrap: [AppComponent]
 })
