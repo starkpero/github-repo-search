@@ -18,7 +18,8 @@ Start the server
 Navgate to the url https://localhost:4200
 
 ### UI Preview
-![New Tab - Google Chrome 21-03-2022 10_35_14](https://user-images.githubusercontent.com/77169816/159208989-c6e0fb35-6af7-4570-8f5b-15403a1b6d92.png)
+![New Issue · starkpero_github-repo-search - Google Chrome 21-03-2022 10_57_11](https://user-images.githubusercontent.com/77169816/159209376-b714dc8e-5531-4ccf-a7eb-8a39fa8b21b9.png)
+
 
 Loading spinner
 ![New Tab - Google Chrome 21-03-2022 10_33_58](https://user-images.githubusercontent.com/77169816/159209026-6537dfff-edad-45fa-af29-3ab9abb378fc.png)
