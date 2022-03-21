@@ -15,7 +15,12 @@ Install the dependencies
 Start the server
 `ng serve`
 
-Navgate to the url https://localhost:4200
+Navgate to the url https://localhost:4200 
+
+### External packages/dependencies used
+1. ngx-pagination
+2. ngx-spinner
+3. Bootstrap
 
 ### UI Preview
 ![New Issue · starkpero_github-repo-search - Google Chrome 21-03-2022 10_57_11](https://user-images.githubusercontent.com/77169816/159209376-b714dc8e-5531-4ccf-a7eb-8a39fa8b21b9.png)
