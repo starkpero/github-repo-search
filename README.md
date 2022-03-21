@@ -2,26 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Development server
+## Setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone the repo
+`git clone`
 
-## Code scaffolding
+Switch to the project repo
+`cd github-repository-listing`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the dependencies
+`npm install`
 
-## Build
+Start the server
+`ng serve`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Navgate to the url https://localhost:4200
 
-## Running unit tests
+### External packages/dependencies used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. ngx-pagination
+2. ngx-spinner
+3. Bootstrap
 
-## Running end-to-end tests
+### UI Preview
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![New Issue · starkpero_github-repo-search - Google Chrome 21-03-2022 10_57_11](https://user-images.githubusercontent.com/77169816/159209376-b714dc8e-5531-4ccf-a7eb-8a39fa8b21b9.png)
 
-## Further help
+Loading spinner
+![New Tab - Google Chrome 21-03-2022 10_33_58](https://user-images.githubusercontent.com/77169816/159209026-6537dfff-edad-45fa-af29-3ab9abb378fc.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The pagination
+![New Tab - Google Chrome 21-03-2022 10_35_44](https://user-images.githubusercontent.com/77169816/159209102-4b8200f9-66e7-417f-9983-1ba1b52f0513.png)
