@@ -1,41 +1,49 @@
 <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
-<div class="container mt-3">
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <div class="card-header bg-secondary text-white">
-            <h3 class="text-center">Github user search</h3>
+<br/>    
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" (submit)="searchUser()">
+            <input  [(ngModel)]="query" name="user" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <br/>
+            <div class="col text-center">
+            <button class="btn btn-outline-success " type="submit">Search</button>
           </div>
-          <div class="card-body">
-            <form class="form-inline" (submit)="searchUser()">
-              <div class="form-group">
-                <input [(ngModel)]="query" name="user" size="120" type="search" class="form-control" placeholder="search user...">
-              </div>
-              <div m-1 mt-2>
-                <input type="submit" value="Search" class="btn btn-secondary btn-lg float-right">
-              </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
-    </div>
+    </nav>
+  </div>
+  <div class="container">
   <div class="row">
       <div class="col">
           <app-github-profile [githubProfile]="githubProfile"></app-github-profile>
       </div>
   </div>
+</div>
   <div class="row">
     <div class="col">
-        <app-github-repos [githubRepos]="githubRepos"></app-github-repos>
+        <app-github-repos  *ngFor="let repo of githubRepos | paginate: {
+          itemsPerPage: 10,
+          currentPage: page,
+          totalItems: totalRepos}" [name]="repo.name" [description]="repo.description"
+          [language]="repo.languages" 
+          [repositoryLink]="repo.htmlUrl"
+          class="column"></app-github-repos>
     </div>
 </div>
+<div class="container">
+  <div class="justify-content-around">
 <div class="pagination-div">
   <pagination-controls class="ui pagination"(pageChange)="pageChanged($event)"></pagination-controls>
   <div class="skip-buttons">
-  <button [disabled]="page == 1" class="ui basic button blue small older" (click)="decrement(10)"><i class="angle double left icon"></i>Older
+  <button [disabled]="page == 1" class="ui basic button blue small older" (click)="decrement(10)"><i class="angle double left icon"></i>
   </button>
-  <button [disabled]="totalRepos == page"class="ui basic button blue small newer" (click)="increment(10)">Newer<i class="angle double right icon"></i>
+  <button [disabled]="totalRepos == page"class="ui basic button blue small newer" (click)="increment(10)"><i class="angle double right icon"></i>
   </button>
 </div>
   </div>
+</div>
+</div>
   
